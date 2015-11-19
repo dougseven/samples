@@ -82,9 +82,9 @@ namespace PotentiometerSensor
             }
         }
 
-        private void InitGpio()
+        private async void InitGpio()
         {
-            var gpio = GpioController.GetDefault();
+            var gpio = await GpioController.GetDefaultAsync();
 
             /* Show an error if there is no GPIO controller */
             if (gpio == null)
